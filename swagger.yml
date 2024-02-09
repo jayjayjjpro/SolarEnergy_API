@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: "RP Flask REST API"
+  description: "An API to calculate Solar Energy"
+  version: "1.0.0"
+
+
+servers:
+  - url: "/api"
+
+
+  paths:
+  /solar:
+    get:
+      operationId: "solar.calculate"
+      tags:
+        - "Solar"
+      summary: "Calculate the solar Energy"
+      responses:
+        "200":
+          description: "Successfully cauclate Solar Energy"
