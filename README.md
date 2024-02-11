@@ -1,1 +1,0 @@
-### Solar Energy calculate API
