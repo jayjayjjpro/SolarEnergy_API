@@ -15,11 +15,3 @@ def get_gti_opta_value(latitude, longitude):
 
 
 
-# latitude = float(input("Input the latitude: "))
-# longitude = float(input("Input the longitude: "))
-# gti_opta_value = get_gti_opta_value(latitude, longitude)
-# if gti_opta_value is not None:
-#     print(gti_opta_value)
-# else:
-#     print("Could not fetch the GTI_opta value.")
-
