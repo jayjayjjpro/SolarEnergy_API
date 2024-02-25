@@ -16,8 +16,18 @@ def calculate_solar_energy():
 
 		# Validate Inputs
 		if None in (latitude, longitude, area):
-			return jsonify({'error': 'Missing required parameters'}), 400
+			return jsonify({'error': 'Missing required parameters (latitude, longitude, area)'}), 400
 		
+		if not 0 < efficiency <= 1:
+			return jsonify({'error': 'Efficiency must be between 0 and 1'}), 400
+
+		if area <= 0:
+			return jsonify({'error': 'Area must be greater than 0'}), 400
+
+		if not 0 < performance_ratio <= 1:
+			return jsonify({'error': 'Performance ratio must be between 0 and 1'}), 400
+
+
 		# Obtain h_value from Global Solar atlas
 		h_value = get_gti_opta_value(latitude,longitude)
 		if h_value is None:
