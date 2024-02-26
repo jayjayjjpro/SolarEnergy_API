@@ -12,7 +12,6 @@ A Flask API to calculate the amount of solar energy(kWh) produced by solar panel
 Solar Energy API harnesses API chaining, notably using Global Solar Atlas responses for accurate, location-specific solar radiation data. It is deployed on the Azure Virtual Machine. Gunicorn is utilized as the web server interface, ensuring efficient handling of concurrent requests.
 
 ## Getting Started
-- For direct API use, go to [Azure VM](#Azure-VM)
 - For setting up locally, see below
 
 ### Requirements for local set up
@@ -36,16 +35,6 @@ docker run -d -p <your-port>:8000 <your-image-name>
 ```
 
 ## How to use the API
-### Azure VM
-1. url
-```shell
-http://4.193.193.171:5050/
-```
-3. Use the url on web broswer or Postman
-4. Example
-```shell
-http://4.193.193.171:5050/?latitude=1.359433&longitude=103.852386&area=150&efficiency=&performance_ratio=0.7
-```
 ### Local Docker
 1. url
 ```shell
@@ -56,8 +45,4 @@ http://<your-ip-address>:<your-port>/
 ```shell
 http://<your-ip-address>:<your-port>/?latitude=1.359433&longitude=103.852386&area=150&efficiency=&performance_ratio=
 ```
-## Help
-If you encounter any issues, please contact Da Jie(	hiverlab.djchiam@gmail.com)
 
-## Authors and Contributors
-- Chiam Da Jie (AI/Backend developer Intern)
