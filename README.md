@@ -40,7 +40,7 @@ docker run -d -p <your-port>:8000 <your-image-name>
 ```shell
 http://<your-ip-address>:<your-port>/
 ```
-2. Use the url on web broswer or Postman
+2. Use the url on web broswer or Postman, modify the query parameters with your own values
 3. Example
 ```shell
 http://<your-ip-address>:<your-port>/?latitude=1.359433&longitude=103.852386&area=150&efficiency=&performance_ratio=
