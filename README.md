@@ -6,10 +6,10 @@ A Flask API to calculate the amount of solar energy(kWh) produced by solar panel
 - E = Energy (kWh)
 - A = total area of the panel(m²)
 - r = yield/efficiency of the solar panel given by the ratio : electrical power (in kWp) of one solar panel (default value = 0.18)
-- H = annual average solar radiation on tilted panels (kWh)
+- H = annual average solar radiation on tilted panels (kWh) (Obtained by making a **Global Solar Atlas** API call using latitude and longitude)
 - PR = Performance ratio, constant for losses (range between 0.5 and 0.9, default value = 0.80)
 
-Solar Energy API harnesses API chaining, notably using Global Solar Atlas responses for accurate, location-specific solar radiation data. It is deployed on the Azure Virtual Machine. Gunicorn is utilized as the web server interface, ensuring efficient handling of concurrent requests.
+Solar Energy API harnesses API chaining, notably using **Global Solar Atlas** responses for accurate, location-specific solar radiation data. It is deployed on the Azure Virtual Machine. Gunicorn is utilized as the web server interface, ensuring efficient handling of concurrent requests.
 
 ## Getting Started
 - For setting up locally, see below
@@ -40,7 +40,7 @@ docker run -d -p <your-port>:8000 <your-image-name>
 ```shell
 http://<your-ip-address>:<your-port>/
 ```
-2. Use the url on web broswer or Postman, modify the query parameters with your own values
+2. Use the url on web broswer or Postman, modify the query parameters(***latitude,longitude,area,efficiency,performance_ratio***) with your own values
 3. Example
 ```shell
 http://<your-ip-address>:<your-port>/?latitude=1.359433&longitude=103.852386&area=150&efficiency=&performance_ratio=
